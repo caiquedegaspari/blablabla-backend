@@ -1,27 +1,28 @@
 import {  Router } from 'express'
 import {celebrate, Segments, Joi } from 'celebrate'
+import TextsController from '../controllers/TextsController'
 
-import LevelsController from '../controllers/LevelsController'
 
 
-const levelsRouter = Router();
-const levelsController = new LevelsController()
+const textsRouter = Router();
+const textsController = new TextsController()
 
 
 //import ensureAuthenticated from '../middlewares/ensureAuthenticated'
 
 
 // Rota: receber a requisição, chamar outro arquivo, devolver uma resposta
-levelsRouter.get('/', levelsController.index)
-levelsRouter.post(
+textsRouter.get('/', textsController.index)
+textsRouter.post(
       '/',
       celebrate({
         [Segments.BODY]: {
-          dsc_level: Joi.string().required(),
+          dsc_text: Joi.string().required(),
+         
         }
       }),
-      levelsController.create)
+      textsController.create)
 
   
 
-export default levelsRouter
+export default textsRouter

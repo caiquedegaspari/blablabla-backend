@@ -1,22 +1,24 @@
 import { Router } from 'express'
-import callsRouter from '@modules/calls/infra/http/routes/calls.routes'
-import plansRouter from '@modules/plans/infra/http/routes/plans.routes'
-import simulatePlanUseRouter from '@modules/plans/infra/http/routes/simulatePlanUse.routes'
 import userRouter from '@modules/users/infra/http/routes/users.routes'
 import sessionsRouter from '@modules/users/infra/http/routes/sessions.routes'
 import passwordRouter from '@modules/users/infra/http/routes/password.routes'
 import profileRouter from '@modules/users/infra/http/routes/profile.routes'
-import regionsRouter from '@modules/regions/infra/http/routes/regions.routes'
+import levelsRouter from '@modules/levels/infra/http/routes/levels.routes'
+import themesRouter from '@modules/themes/infra/http/routes/themes.routes'
+import audiosRouter from '@modules/audios/infra/http/routes/audios.routes'
+import textsRouter from '@modules/texts/infra/http/routes/texts.routes'
+
 const routes = Router()
 
-routes.use('/calls', callsRouter)
-routes.use('/plans', plansRouter)
-routes.use('/plans/simulate', simulatePlanUseRouter)
-routes.use('/users', userRouter)
 
+routes.use('/users', userRouter)
 routes.use('/sessions', sessionsRouter)
 routes.use('/password', passwordRouter)
 routes.use('/profile', profileRouter)
-routes.use('/regions', regionsRouter)
+routes.use('/levels', levelsRouter)
+routes.use('/themes', themesRouter)
+routes.use('/audios', audiosRouter)
+routes.use('/texts', textsRouter)
+
 
 export default routes;

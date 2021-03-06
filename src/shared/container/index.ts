@@ -13,14 +13,16 @@ import UserTokensRepository from '@modules/users/infra/typeorm/repositories/User
 
 import ILevelsRepository from '@modules/levels/repositories/ILevelsRepository'
 import LevelsRepository from '@modules/levels/infra/typeorm/repositories/LevelsRepository'
-
-
-import IRegionsRepository from '@modules/regions/repositories/IRegionsRepository'
-import RegionsRepository from '@modules/regions/infra/typeorm/repositories/RegionsRepository'
-
-import ICallsRepository from '@modules/calls/repositories/ICallsRepository'
-import CallsRepository from '@modules/calls/infra/typeorm/repositories/CallsRepository'
    
+import IThemesRepository from '@modules/themes/repositories/IThemesRepository'
+import ThemesRepository from '@modules/themes/infra/typeorm/repositories/ThemesRepository'
+   
+
+import IAudiosRepository from '@modules/audios/repositories/IAudiosRepository'
+import AudiosRepository from '@modules/audios/infra/typeorm/repositories/AudiosRepository'
+
+import ITextsRepository from '@modules/texts/repositories/ITextsRepository'
+import TextsRepository from '@modules/texts/infra/typeorm/repositories/TextsRepository'
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
    UsersRepository
@@ -36,14 +38,15 @@ container.registerSingleton<IUserTokensRepository>(
     'LevelsRepository',
       LevelsRepository
      )
-
-     container.registerSingleton<IRegionsRepository>(
-      'RegionsRepository',
-      RegionsRepository
+     container.registerSingleton<IThemesRepository>(
+      'ThemesRepository',
+      ThemesRepository
        )
-
-       container.registerSingleton<ICallsRepository>(
-        'CallsRepository',
-        CallsRepository
+       container.registerSingleton<IAudiosRepository>(
+        'AudiosRepository',
+        AudiosRepository
          )
-      
+         container.registerSingleton<ITextsRepository>(
+          'TextsRepository',
+          TextsRepository
+           )
