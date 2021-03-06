@@ -23,6 +23,10 @@ import AudiosRepository from '@modules/audios/infra/typeorm/repositories/AudiosR
 
 import ITextsRepository from '@modules/texts/repositories/ITextsRepository'
 import TextsRepository from '@modules/texts/infra/typeorm/repositories/TextsRepository'
+
+import ILessonsRepository from '@modules/lessons/repositories/ILessonsRepository'
+import LessonsRepository from '@modules/lessons/infra/typeorm/repositories/LessonsRepository'
+
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
    UsersRepository
@@ -50,3 +54,7 @@ container.registerSingleton<IUserTokensRepository>(
           'TextsRepository',
           TextsRepository
            )
+           container.registerSingleton<ILessonsRepository>(
+            'LessonsRepository',
+            LessonsRepository
+             )

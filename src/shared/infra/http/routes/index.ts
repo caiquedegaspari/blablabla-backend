@@ -7,6 +7,7 @@ import levelsRouter from '@modules/levels/infra/http/routes/levels.routes'
 import themesRouter from '@modules/themes/infra/http/routes/themes.routes'
 import audiosRouter from '@modules/audios/infra/http/routes/audios.routes'
 import textsRouter from '@modules/texts/infra/http/routes/texts.routes'
+import lessonsRouter from '@modules/lessons/infra/http/routes/lessons.routes'
 
 const routes = Router()
 
@@ -19,6 +20,7 @@ routes.use('/levels', levelsRouter)
 routes.use('/themes', themesRouter)
 routes.use('/audios', audiosRouter)
 routes.use('/texts', textsRouter)
+routes.use('/lessons', lessonsRouter)
 
 
 export default routes;
