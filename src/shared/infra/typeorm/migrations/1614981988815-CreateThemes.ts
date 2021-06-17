@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner, Table} from "typeorm";
+/* import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
 export class CreateThemes1614981988815 implements MigrationInterface {
 
@@ -52,3 +52,4 @@ export class CreateThemes1614981988815 implements MigrationInterface {
     }
 
 }
+ */
